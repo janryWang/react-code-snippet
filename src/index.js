@@ -66,6 +66,9 @@ const ReactCodeSinppet = styled(
   .demo-wrapper {
     position: relative;
   }
+  pre{
+    background:none;
+  }
   .code-expand-icon-show {
     position: absolute;
     right: 0px;

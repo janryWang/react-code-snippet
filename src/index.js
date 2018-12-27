@@ -41,7 +41,9 @@ const ReactCodeSinppet = styled(
       if (codeShow) {
         return (
           <div className="demo-code-wrapper">
-            <Hlt language="jsx">{code || ""}</Hlt>
+            <Hlt language="jsx" languages={["javascript", "jsx", "bash"]}>
+              {code || ""}
+            </Hlt>
           </div>
         )
       }

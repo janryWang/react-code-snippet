@@ -55,7 +55,7 @@ const ReactCodeSinppet = styled(
     }
 
     render() {
-      const { className, justCode } = this.props
+      const { className, children, justCode } = this.props
       if (justCode) {
         return (
           <div className={className}>

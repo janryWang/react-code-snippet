@@ -1,6 +1,6 @@
 {
   "name": "react-code-snippet",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "React code snippet component",
   "main": "lib/index.js",
   "scripts": {

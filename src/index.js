@@ -35,28 +35,31 @@ const ReactCodeSinppet = styled(
       }
     }
 
+    renderHlt() {
+      const { code, lang } = this.props
+      return (
+        <Hlt
+          language={lang == "jsx" ? "javascript" : lang}
+          languages={["javascript", "css", "html", "bash"]}
+        >
+          {code || ""}
+        </Hlt>
+      )
+    }
+
     renderCode() {
-      const { code } = this.props
       const { codeShow } = this.state
       if (codeShow) {
-        return (
-          <div className="demo-code-wrapper">
-            <Hlt language="jsx" languages={["javascript", "jsx", "bash"]}>
-              {code || ""}
-            </Hlt>
-          </div>
-        )
+        return <div className="demo-code-wrapper">{this.renderHlt()}</div>
       }
     }
 
     render() {
-      const { className, children, code, justCode, lang } = this.props
+      const { className, justCode } = this.props
       if (justCode) {
         return (
           <div className={className}>
-            <div className="demo-code-wrapper">
-              <Hlt language={lang}>{code || ""}</Hlt>
-            </div>
+            <div className="demo-code-wrapper">{this.renderHlt()}</div>
           </div>
         )
       }

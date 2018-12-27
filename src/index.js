@@ -36,11 +36,20 @@ const ReactCodeSinppet = styled(
     }
 
     renderHlt() {
-      const { code, lang } = this.props
+      let { code, lang } = this.props
+      if (lang == "jsx") {
+        lang = "javascript"
+      }
+      if (lang == "html") {
+        lang = "htmlbars"
+      }
+      if (lang == "css") {
+        lang = "scss"
+      }
       return (
         <Hlt
-          language={lang == "jsx" ? "javascript" : lang}
-          languages={["javascript", "css", "html", "bash"]}
+          language={lang}
+          languages={["javascript", "scss", "htmlbars", "bash"]}
         >
           {code || ""}
         </Hlt>

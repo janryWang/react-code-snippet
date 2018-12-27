@@ -48,7 +48,16 @@ const ReactCodeSinppet = styled(
     }
 
     render() {
-      const { className, children } = this.props
+      const { className, children, justCode, lang } = this.props
+      if (justCode) {
+        return (
+          <div className={className}>
+            <div className="demo-code-wrapper">
+              <Hlt language={lang}>{code || ""}</Hlt>
+            </div>
+          </div>
+        )
+      }
       return (
         <div className={className}>
           <div className="demo-wrapper">

@@ -37,13 +37,13 @@ const ReactCodeSinppet = styled(
 
     renderHlt() {
       let { code, lang } = this.props
-      if (lang == "jsx") {
+      if (lang == "jsx" || lang == "typescript") {
         lang = "javascript"
       }
-      if (lang == "html") {
+      if (lang == "html" || lang == "htm") {
         lang = "htmlbars"
       }
-      if (lang == "css") {
+      if (lang == "css" || lang == "sass" || lang == "less") {
         lang = "scss"
       }
       return (
@@ -86,6 +86,7 @@ const ReactCodeSinppet = styled(
 )`
   border: 1px solid #eee;
   padding: 20px;
+  margin-bottom: 20px;
   .demo-wrapper {
     position: relative;
   }

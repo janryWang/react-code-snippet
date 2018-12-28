@@ -67,7 +67,7 @@ const ReactCodeSinppet = styled(
       const { className, children, justCode } = this.props
       if (justCode) {
         return (
-          <div className={className}>
+          <div className={`${className} just-code`}>
             <div className="demo-code-wrapper">{this.renderHlt()}</div>
           </div>
         )
@@ -87,6 +87,10 @@ const ReactCodeSinppet = styled(
   border: 1px solid #eee;
   padding: 20px;
   margin-bottom: 20px;
+  &.just-code {
+    padding: 0;
+    border: none;
+  }
   .demo-wrapper {
     position: relative;
   }
@@ -94,6 +98,12 @@ const ReactCodeSinppet = styled(
     background: none;
     padding: 16px 0;
     margin: 0;
+  }
+  &.just-code {
+    pre {
+      padding: 0;
+      margin: 0;
+    }
   }
   .code-expand-icon-show {
     position: absolute;
@@ -204,6 +214,11 @@ const ReactCodeSinppet = styled(
 
     .hljs-strong {
       font-weight: bold;
+    }
+  }
+  &.just-code {
+    .demo-code-wrapper {
+      border: none;
     }
   }
 `

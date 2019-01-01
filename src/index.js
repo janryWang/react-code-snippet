@@ -93,6 +93,7 @@ const ReactCodeSinppet = styled(
   }
   .demo-wrapper {
     position: relative;
+    padding-bottom: 20px;
   }
   pre {
     background: none;

@@ -110,14 +110,14 @@ const ReactCodeSinppet = styled(
   .code-expand-icon-show {
     position: absolute;
     right: 0px;
-    bottom: -10px;
+    bottom: 0px;
     height: 20px;
     cursor: pointer;
   }
   .code-expand-icon-hide {
     position: absolute;
     right: 0px;
-    bottom: -10px;
+    bottom: 0px;
     height: 20px;
     cursor: pointer;
   }

@@ -37,7 +37,7 @@ const ReactCodeSinppet = styled(
 
     renderHlt() {
       let { code, lang } = this.props
-      if (lang == "jsx" || lang == "typescript") {
+      if (lang == "jsx") {
         lang = "javascript"
       }
       if (lang == "html" || lang == "htm") {
@@ -49,7 +49,7 @@ const ReactCodeSinppet = styled(
       return (
         <Hlt
           language={lang}
-          languages={["javascript", "scss", "htmlbars", "bash"]}
+          languages={["javascript", "typescript", "scss", "htmlbars", "bash"]}
         >
           {code || ""}
         </Hlt>

@@ -6,11 +6,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ReactCodeSinppet from 'react-code-snippet'
-ReactDOM.render(
-  <ReactCodeSinppet code={`<div>Hello world</div>`}>
+export default ()=>(
+  <ReactCodeSinppet lang="jsx" code={`<div>Hello world</div>`}>
     <div>Hello wrorld</div>
   </ReactCodeSinppet>
-  mountNode
 )
 
 ```

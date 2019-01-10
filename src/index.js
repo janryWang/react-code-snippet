@@ -64,8 +64,8 @@ const ReactCodeSinppet = styled(
     }
 
     render() {
-      const { className, children, justCode } = this.props
-      if (justCode) {
+      const { className, children, lang } = this.props
+      if (lang !== "jsx") {
         return (
           <div className={`${className} just-code`}>
             <div className="demo-code-wrapper">{this.renderHlt()}</div>

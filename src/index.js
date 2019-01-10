@@ -72,7 +72,6 @@ const ReactCodeSinppet = styled(
           </div>
         )
       }
-      console.log(this.props)
       return (
         <div className={className}>
           <div className="demo-wrapper">

@@ -94,7 +94,7 @@ const ReactCodeSinppet = styled(
   .demo-wrapper {
     position: relative;
     padding-bottom: 20px;
-    overflow: hidden;
+    overflow: visible;
   }
   pre {
     background: none;
@@ -110,14 +110,14 @@ const ReactCodeSinppet = styled(
   .code-expand-icon-show {
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    bottom: -5px;
     height: 20px;
     cursor: pointer;
   }
   .code-expand-icon-hide {
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    bottom: -5px;
     height: 20px;
     cursor: pointer;
   }

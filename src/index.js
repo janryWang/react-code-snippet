@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Hlt from "react-highlight"
+import CodeSandBox from "./code-sandbox"
 
 const ReactCodeSinppet = styled(
   class extends React.Component {
@@ -64,7 +65,7 @@ const ReactCodeSinppet = styled(
     }
 
     render() {
-      const { className, children, lang } = this.props
+      const { className, children, lang, code } = this.props
       if (lang !== "jsx") {
         return (
           <div className={`${className} just-code`}>
@@ -77,6 +78,7 @@ const ReactCodeSinppet = styled(
           <div className="demo-wrapper">
             {children}
             {this.renderButton()}
+            <CodeSandBox className="code-sandbox" code={code} />
           </div>
           {this.renderCode()}
         </div>
@@ -117,6 +119,13 @@ const ReactCodeSinppet = styled(
   .code-expand-icon-hide {
     position: absolute;
     right: 0px;
+    bottom: -5px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .code-sandbox {
+    position: absolute;
+    right: 30px;
     bottom: -5px;
     height: 20px;
     cursor: pointer;

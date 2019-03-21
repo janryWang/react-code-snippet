@@ -1,9 +1,10 @@
 {
   "name": "react-code-snippet",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "React code snippet component",
   "main": "lib/index.js",
   "scripts": {
+    "start": "doc-scripts start",
     "build": "babel src --out-dir lib",
     "precommit": "npm run build && lint-staged && npm run test  && git add -A"
   },
@@ -79,6 +80,7 @@
     }
   },
   "dependencies": {
+    "codesandbox": "^2.1.1",
     "react-highlight": "^0.12.0",
     "styled-components": "^4.1.3"
   }

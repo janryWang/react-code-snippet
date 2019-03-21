@@ -32,6 +32,15 @@ const html = `
 
 const dependencies = window.codeSandBoxDependencies
 
+const filterDeps = (code = "", deps) => {
+  return Object.keys(deps || {}).reduce((buf, key) => {
+    if (code.indexOf(key) > -1) {
+      buf[key] = deps[key]
+    }
+    return buf
+  }, {})
+}
+
 export default styled(({ code, className }) => {
   const parameters = getParameters({
     files: {
@@ -40,7 +49,7 @@ export default styled(({ code, className }) => {
           dependencies: {
             react: "latest",
             "react-dom": "latest",
-            ...dependencies
+            ...filterDeps(code, dependencies)
           }
         }
       },

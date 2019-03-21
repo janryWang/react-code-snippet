@@ -33,6 +33,8 @@ const html = `
 </html>
 `
 
+const dependencies = window.codeSandBoxDependencies
+
 export default styled(({ code, className }) => {
   const parameters = getParameters({
     files: {
@@ -40,7 +42,8 @@ export default styled(({ code, className }) => {
         content: {
           dependencies: {
             react: "latest",
-            "react-dom": "latest"
+            "react-dom": "latest",
+            ...dependencies
           }
         }
       },
@@ -66,6 +69,8 @@ export default styled(({ code, className }) => {
     </form>
   )
 })`
+  margin: 0;
+  padding: 0;
   .code-sandbox-btn {
     border: none;
     padding: 0;

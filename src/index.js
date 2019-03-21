@@ -126,7 +126,7 @@ const ReactCodeSinppet = styled(
   .code-sandbox {
     position: absolute;
     right: 30px;
-    bottom: -5px;
+    bottom: -7px;
     height: 20px;
     cursor: pointer;
   }

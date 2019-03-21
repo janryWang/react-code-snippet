@@ -25,10 +25,7 @@ const html = `
     <title>React Code Snippet Demo</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script>
-      var mountNode = document.getElementById('root')
-    </script>
+    <div id="root" style="margin:20px"></div>
   </body>
 </html>
 `

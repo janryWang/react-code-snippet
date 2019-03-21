@@ -32,6 +32,8 @@ const html = `
 
 const dependencies = window.codeSandBoxDependencies
 
+const peerDependencies = window.codeSandBoxPeerDependencies
+
 const filterDeps = (code = "", deps) => {
   return Object.keys(deps || {}).reduce((buf, key) => {
     if (code.indexOf(key) > -1) {
@@ -49,7 +51,8 @@ export default styled(({ code, className }) => {
           dependencies: {
             react: "latest",
             "react-dom": "latest",
-            ...filterDeps(code, dependencies)
+            ...filterDeps(code, dependencies),
+            ...peerDependencies
           }
         }
       },

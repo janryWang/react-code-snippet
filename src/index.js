@@ -89,6 +89,7 @@ const ReactCodeSinppet = styled(
   border: 1px solid #eee;
   padding: 20px;
   margin-bottom: 20px;
+  overflow: auto;
   &.just-code {
     padding: 0;
     border: none;
